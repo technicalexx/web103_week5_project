@@ -1,21 +1,17 @@
-import React from 'react'
-import '../App.css'
+import { Link } from 'react-router-dom'
 import '../css/Navigation.css'
 
 const Navigation = () => {
-    return (
-        <nav>
-            <ul>
-                <li><h1>Bolt Bucket 🏎️</h1></li>
-            </ul>
+  return (
+    <nav className="navbar">
+      <h1 className="nav-title">Sandwich Customizer 🥪</h1>
 
-            <ul>
-                <li><a href='/' role='button'>Customize</a></li>
-                <li><a href='/customcars' role='button'>View Cars</a></li>
-            </ul>
-            
-        </nav>
-    )
+      <div className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="/new">Create Sandwich</Link>
+      </div>
+    </nav>
+  )
 }
 
 export default Navigation

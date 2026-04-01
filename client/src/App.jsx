@@ -1,40 +1,23 @@
-import React from 'react'
-import { useRoutes } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import ViewCars from './pages/ViewCars'
-import EditCar from './pages/EditCar'
-import CreateCar from './pages/CreateCar'
-import CarDetails from './pages/CarDetails'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
-const App = () => {
-  let element = useRoutes([
-    {
-      path: '/',
-      element: <CreateCar title='BOLT BUCKET | Customize' />
-    },
-    {
-      path:'/customcars',
-      element: <ViewCars title='BOLT BUCKET | Custom Cars' />
-    },
-    {
-      path: '/customcars/:id',
-      element: <CarDetails title='BOLT BUCKET | View' />
-    },
-    {
-      path: '/edit/:id',
-      element: <EditCar title='BOLT BUCKET | Edit' />
-    }
-  ])
+import Navigation from './components/Navigation'
+import ViewSandwiches from './pages/ViewSandwiches'
+import CreateSandwich from './pages/CreateSandwich'
+import SandwichDetails from './pages/SandwichDetails'
+import EditSandwich from './pages/EditSandwich'
 
+function App() {
   return (
-    <div className='app'>
-
+    <>
       <Navigation />
-
-      { element }
-
-    </div>
+      <Routes>
+        <Route path="/" element={<ViewSandwiches />} />
+        <Route path="/new" element={<CreateSandwich />} />
+        <Route path="/sandwich/:id" element={<SandwichDetails />} />
+        <Route path="/edit/:id" element={<EditSandwich />} />
+      </Routes>
+    </>
   )
 }
 

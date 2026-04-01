@@ -1,12 +1,218 @@
-.app {
-    background: url('./assets/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding-bottom: 50px;
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page-container h1 {
+  margin-bottom: 10px;
+}
+
+.page-container p {
+  margin-bottom: 20px;
+}
+
+.sandwich-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sandwich-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sandwich-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card-buttons a {
+  text-decoration: none;
+}
+
+.card-buttons button {
+  min-width: 140px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #e6e6e6;
+}
+
+button:hover {
+  background-color: #d8d8d8;
+}
+
+.sandwich-form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sandwich-form label {
+  font-weight: bold;
+}
+
+.sandwich-form input,
+.sandwich-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.details-card {
+  max-width: 420px;
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.details-card p {
+  margin: 12px 0;
+}
+
+.preview-wrapper {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.sandwich-preview {
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px 0;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bread,
+.protein-layer,
+.cheese-layer,
+.sauce-layer {
+  width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.top-bread,
+.bottom-bread {
+  padding: 16px;
+}
+
+.top-bread {
+  border-radius: 40px 40px 18px 18px;
+}
+
+.bottom-bread {
+  border-radius: 18px 18px 40px 40px;
+}
+
+.protein-layer,
+.cheese-layer,
+.sauce-layer {
+  padding: 10px;
+}
+
+/* Bread colors */
+.bread.white {
+  background-color: #f5deb3;
+}
+
+.bread.wheat {
+  background-color: #d2a679;
+}
+
+.bread.croissant {
+  background-color: #e0b15a;
+}
+
+/* Protein colors */
+.protein-layer.turkey {
+  background-color: #f2c9b6;
+}
+
+.protein-layer.ham {
+  background-color: #e8a4a8;
+}
+
+.protein-layer.veggie {
+  background-color: #9ccc65;
+}
+
+/* Cheese colors */
+.cheese-layer.swiss {
+  background-color: #fff1a8;
+}
+
+.cheese-layer.cheddar {
+  background-color: #ffb347;
+}
+
+/* Sauce colors */
+.sauce-layer.mayo {
+  background-color: #f7f0d9;
+}
+
+.sauce-layer.mustard {
+  background-color: #f4d03f;
+}
+
+.sauce-layer.chipotle {
+  background-color: #d98880;
+}
+
+.preview-name {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
